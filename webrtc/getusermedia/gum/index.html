@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <meta itemprop="name" content="WebRTC code samples">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
+    <base target="_blank">
+    <title>getUserMedia</title>
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="container">
+    <video id="gum-local" autoplay playsinline></video>
+    <button id="showVideo">Open camera</button>
+
+    <div id="errorMsg"></div>
+
+    <p class="warning"><strong>Warning:</strong> if you're not using headphones, pressing play will cause feedback.</p>
+
+    <p>Display the video stream from <code>getUserMedia()</code> in a video element.</p>
+
+    <p>The <code>MediaStream</code> object <code>stream</code> passed to the <code>getUserMedia()</code> callback is in
+        global scope, so you can inspect it from the console.</p>
+
+</div>
+
+<!-- <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script> -->
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
