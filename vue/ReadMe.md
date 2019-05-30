@@ -5,10 +5,12 @@
 + [vue2.5入门 视频](https://www.imooc.com/learn/980)
 + [《Vue+Webpack打造todo应用》](https://www.imooc.com/learn/935)
 
-#### 组件库
 
+#### 组件库
 + [《VUE UI框架比较》](https://segmentfault.com/a/1190000008648003)
 + [iView](https://www.iviewui.com/)
++ [awesome-vue](https://github.com/vuejs/awesome-vue)
++ [ElemeFE/element](https://github.com/ElemeFE/element)
 
 #### 参考资料
 + [《使用 vue-cli 搭建项目》](https://blog.csdn.net/wisewrong/article/details/55212684)
