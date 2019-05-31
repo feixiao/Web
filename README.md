@@ -16,6 +16,7 @@
 #### 音视频
 ##### video.js
 + [video.js](https://github.com/videojs/video.js) HTML5 & Flash video player
++ [vue-video-player](https://github.com/surmon-china/vue-video-player)
 
 #### Webrtc
 + [learning-webrtc](./learning-webrtc)
