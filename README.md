@@ -9,6 +9,11 @@
 + [《JavaScript高级程序设计》](https://book.douban.com/subject/10546125/)
 + [《深入理解ES6》](https://book.douban.com/subject/27072230/)
 
+#### jQuery
+
++ [《为什么2019年了我还在用jQuery》](z=MjM5MDE0Mjc4MA==&mid=2651016539&idx=2&sn=13b7286a07b9105ec7c42300d01d1384&chksm=bdbeb5088ac93c1e20d8c08d1d5762bfb57adadb9543620428fb78d4627f50c554a33c3329ef&mpshare=1&scene=1&srcid=#rd)
++ [《JavaScript & jQuery交互式Web前端开发》](https://book.douban.com/subject/26433805/)
+
 #### Vue
 + [Vue](./vue/ReadMe.md)
 
@@ -29,6 +34,6 @@
 + [RTCMultiConnection](https://github.com/muaz-khan/RTCMultiConnection) 
 + [vue-webrtc](https://github.com/westonsoftware/vue-webrtc)
 
+#### 其他
 
-
-
++ [全栈工程师培训材料](https://github.com/ruanyf/jstraining)
