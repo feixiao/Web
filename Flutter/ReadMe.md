@@ -6,4 +6,5 @@
 + [官方文档翻译](https://flutterchina.club/get-started/install/)
 + [《Flutter实战》](https://book.flutterchina.club/)
 + [《Flutter技术入门与实战》](https://book.douban.com/subject/30437876/)
+    + [flutter-book](https://github.com/kangshaojun/flutter-book)
 + [《alibaba/flutter-go》](https://github.com/alibaba/flutter-go)
