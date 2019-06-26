@@ -9,7 +9,8 @@ python -m SimpleHTTPServer
 
 访问http://localhost:8000
 ```
-
++ [getUserMedia()视频约束](https://webrtc.org.cn/getusermedia-video-constraints/)
++ [getUserMedia()音频约束](https://webrtc.org.cn/getusermedia-audio-constraints/)
 
 
 #### 参考资料
