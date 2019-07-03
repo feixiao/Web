@@ -7,6 +7,8 @@
  */
 'use strict';
 
+
+var stream = null;
 // Put variables in global scope to make them available to the browser console.
 const constraints = window.constraints = {
   audio: false,
@@ -47,7 +49,7 @@ function errorMsg(msg, error) {
 
 async function init(e) {
   try {
-    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    stream = await navigator.mediaDevices.getUserMedia(constraints);
     handleSuccess(stream);
     e.target.disabled = true;
   } catch (e) {
@@ -55,4 +57,14 @@ async function init(e) {
   }
 }
 
+async function uninit(e) {
+  try {
+    const tracks = stream.getTracks()
+    tracks[0].stop()
+  } catch (e) {
+    handleError(e);
+  }
+}
+
 document.querySelector('#showVideo').addEventListener('click', e => init(e));
+document.querySelector('#closeVideo').addEventListener('click', e => uninit(e));
