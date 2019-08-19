@@ -23,7 +23,7 @@ function handleSuccess(stream) {
   console.log(`Using video device: ${videoTracks[0].label}`);
   window.stream = stream; // make variable available to browser console
 
-//   关联stream对象
+  //   关联stream对象
   video.srcObject = stream;
 }
 
@@ -61,6 +61,7 @@ async function uninit(e) {
   try {
     const tracks = stream.getTracks()
     tracks[0].stop()
+    document.querySelector('#container').load(location.href+" .div");
   } catch (e) {
     handleError(e);
   }

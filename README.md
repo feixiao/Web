@@ -24,6 +24,8 @@
 ##### video.js
 + [video.js](https://github.com/videojs/video.js) HTML5 & Flash video player
 + [vue-video-player](https://github.com/surmon-china/vue-video-player)
++ [flv.js](https://github.com/bilibili/flv.js)
++ [OvenPlayer](https://github.com/AirenSoft/OvenPlayer)
 
 #### Webrtc
 + [learning-webrtc](./learning-webrtc)
@@ -38,3 +40,4 @@
 #### 其他
 
 + [全栈工程师培训材料](https://github.com/ruanyf/jstraining)
++ [WEB直播技术入门及在 Vue 中应用 video.js](https://savokiss.com/tech/web-live-tech-with-vue.html)
