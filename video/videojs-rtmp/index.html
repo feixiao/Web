@@ -4,111 +4,136 @@
 <head>
   <meta charset="utf-8" />
   <title>Page Title</title>
-  <link rel="stylesheet" href="./js/video-js.min.css">
-  <script src="./js/video.min.js"></script>
+  <!-- <link rel="stylesheet" href="./js/video-js.min.css">
+  <script src="./js/video.min.js"></script> -->
+
+  <link href="./js/video-js.css" rel="stylesheet">
+  <script src="./js/video.js"></script> 
+
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.6.0/video-js.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.6.0/video.min.js"></script> -->
+
   <script src="https://cdn.jsdelivr.net/npm/videojs-flash@2/dist/videojs-flash.min.js"></script>
 </head>
 
 <body>
+  <button type="button" onclick="play()">Click Me!</button>
   <table class="exhibit_table">  
     <tr>  
         <th>
-          <video id="myvideo1" style="width: 600px; height: 300px" class="video-js" controls>
+          <video id="myvideo1" style="width: 400px; height: 300px" class="video-js" controls>
             <source src="rtmp://172.17.229.3/live/test001">
           </video>
         </th>
         <th>
-          <video id="myvideo2" style="width: 600px; height: 300px" class="video-js" controls>
+          <video id="myvideo2" style="width: 400px; height: 300px" class="video-js" controls>
             <source src="rtmp://172.17.229.3/live/test001">
           </video>
         </th>
         <th>
-          <video id="myvideo3" style="width: 600px; height: 300px" class="video-js" controls>
+          <video id="myvideo3" style="width: 400px; height: 300px" class="video-js" controls>
+            <source src="rtmp://172.17.229.3/live/test001">
+          </video>
+        </th>
+        <th>
+            <video id="myvideo4" style="width: 400px; height: 300px" class="video-js" controls>
+              <source src="rtmp://172.17.229.3/live/test001">
+            </video>
+        </th>  
+    </tr>  
+    <tr>  
+      <th>
+        <video id="myvideo5" style="width: 400px; height: 300px" class="video-js" controls>
+          <source src="rtmp://172.17.229.3/live/test001">
+        </video>
+      </th>
+      <th>
+        <video id="myvideo6" style="width: 400px; height: 300px" class="video-js" controls>
+          <source src="rtmp://172.17.229.3/live/test001">
+        </video>
+      </th>
+      <th>
+          <video id="myvide7" style="width: 400px; height: 300px" class="video-js" controls>
+            <source src="rtmp://172.17.229.3/live/test001">
+          </video>
+        </th>  
+        <th>
+          <video id="myvideo8" style="width: 400px; height: 300px" class="video-js" controls>
             <source src="rtmp://172.17.229.3/live/test001">
           </video>
         </th>
     </tr>  
     <tr>  
       <th>
-        <video id="myvideo4" style="width: 600px; height: 300px" class="video-js" controls>
-          <source src="rtmp://172.17.229.3/live/test001">
-        </video>
-      </th>  
-      <th>
-        <video id="myvideo5" style="width: 600px; height: 300px" class="video-js" controls>
+        <video id="myvideo9" style="width: 400px; height: 300px" class="video-js" controls>
           <source src="rtmp://172.17.229.3/live/test001">
         </video>
       </th>
-      <th>
-        <video id="myvideo6" style="width: 600px; height: 300px" class="video-js" controls>
-          <source src="rtmp://172.17.229.3/live/test001">
-        </video>
-      </th>
-    </tr>  
-    <tr>  
-      <th>
-        <video id="myvide7" style="width: 600px; height: 300px" class="video-js" controls>
-          <source src="rtmp://172.17.229.3/live/test001">
-        </video>
-      </th>  
-      <th>
-        <video id="myvideo8" style="width: 600px; height: 300px" class="video-js" controls>
-          <source src="rtmp://172.17.229.3/live/test001">
-        </video>
-      </th>
-      <th>
-        <video id="myvideo9" style="width: 600px; height: 300px" class="video-js" controls>
-          <source src="rtmp://172.17.229.3/live/test001">
-        </video>
-      </th>
-    </tr>  
+        <th>
+          <video id="myvide10" style="width: 400px; height: 300px" class="video-js" controls>
+            <source src="rtmp://172.17.229.3/live/test001">
+          </video>
+        </th>  
+        <th>
+          <video id="myvideo11" style="width: 400px; height: 300px" class="video-js" controls>
+            <source src="rtmp://172.17.229.3/live/test001">
+          </video>
+        </th>
+        <th>
+          <video id="myvideo12" style="width: 400px; height: 300px" class="video-js" controls>
+            <source src="rtmp://172.17.229.3/live/test001">
+          </video>
+        </th>
+      </tr>  
   </table>  
 
   <script>
-    var player1 = videojs('myvideo1', {}, function () {
+    function play() {    
+    var player1 = videojs('myvideo1', {autoplay: 'muted'}, function () {
       console.log('videojs播放');
     })
     player1.play();
 
-    var player2 = videojs('myvideo2', {}, function () {
+    var player2 = videojs('myvideo2', {autoplay: 'muted'}, function () {
       console.log('videojs播放');
     })
     player2.play();
 
-    var player3 = videojs('myvideo3', {}, function () {
+    var player3 = videojs('myvideo3', {autoplay: 'muted'}, function () {
       console.log('videojs播放');
     })
     player3.play();
     
-    var player4 = videojs('myvideo4', {}, function () {
+    var player4 = videojs('myvideo4', {autoplay: 'muted'}, function () {
       console.log('videojs播放');
     })
 
     player4.play();
-    var player5 = videojs('myvideo5', {}, function () {
+    var player5 = videojs('myvideo5', {autoplay: 'muted'}, function () {
       console.log('videojs播放');
     })
     player5.play();
 
-    var player6 = videojs('myvideo6', {}, function () {
+    var player6 = videojs('myvideo6', {autoplay: 'muted'}, function () {
       console.log('videojs播放');
     })
     player6.play();
 
-    var player7 = videojs('myvideo7', {}, function () {
+    var player7 = videojs('myvideo7', {autoplay: 'muted'}, function () {
       console.log('videojs播放');
     })
     player7.play();
 
-    var player8 = videojs('myvideo8', {}, function () {
+    var player8 = videojs('myvideo8', {autoplay: 'muted'}, function () {
       console.log('videojs播放');
     })
     player8.play();
 
-    var player9 = videojs('myvideo9', {}, function () {
+    var player9 = videojs('myvideo9', {autoplay: 'muted'}, function () {
       console.log('videojs播放');
     })
     player9.play();
+    }
   </script>
 </body>
 
