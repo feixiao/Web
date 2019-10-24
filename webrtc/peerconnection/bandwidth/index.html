@@ -34,19 +34,19 @@
           <h2>Camera constraints</h2>
           <div id="minWidth">
             <label>Min width <span>4096</span>px:</label>
-            <input type="number" min="0" max="4096" value="1280">
+            <input type="number" min="0" max="4096" value="640">
           </div>
           <div id="maxWidth">
             <label>Max width <span>4096</span>px:</label>
-            <input type="number" min="0" max="4096" value="1920">
+            <input type="number" min="0" max="4096" value="1280">
           </div>
           <div id="minHeight">
             <label>Min height <span>2160</span>px:</label>
-            <input type="number" min="0" max="2160" value="720">
+            <input type="number" min="0" max="2160" value="360">
           </div>
           <div id="maxHeight">
             <label>Max height <span>2160</span>px:</label>
-            <input type="number" min="0" max="2160" value="1080">
+            <input type="number" min="0" max="2160" value="720">
           </div>
           <div id="minFramerate">
             <label>Min frameRate <span>20</span>fps:</label>
@@ -61,14 +61,22 @@
       </div>
 
     </section>
-    
+ 
     <video id="localVideo" playsinline autoplay muted></video>
     <video id="remoteVideo" playsinline autoplay></video>
+
+    <div>
+        <input type="text" id="localVideoStats">
+        <input type="text" id="remoteVideoStats">
+    </div>
+    
 
     <div id="buttons">
         <label>Bandwidth:</label>
         <select id="bandwidth" disabled>
             <option value="unlimited" selected>unlimited</option>
+            <option value="8000">8000</option>
+            <option value="4000">4000</option>
             <option value="2000">2000</option>
             <option value="1000">1000</option>
             <option value="500">500</option>

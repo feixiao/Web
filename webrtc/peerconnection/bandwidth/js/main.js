@@ -42,6 +42,9 @@ const maxHeightInput = document.querySelector('div#maxHeight input');
 const minFramerateInput = document.querySelector('div#minFramerate input');
 const maxFramerateInput = document.querySelector('div#maxFramerate input');
 
+const localVideoStatsDiv = document.getElementById('localVideoStats');
+const remoteVideoStatsDiv = document.getElementById('remoteVideoStats');
+
 const offerOptions = {
   offerToReceiveAudio: 0,
   offerToReceiveVideo: 1
@@ -325,3 +328,14 @@ function displayGetUserMediaConstraints() {
   console.log('getUserMedia constraints', constraints);
   getUserMediaConstraintsDiv.textContent = JSON.stringify(constraints, null, '    ');
 }
+
+setInterval(() => {
+  if (localVideo.videoWidth) {
+    localVideoStatsDiv.value = 'local: ' +
+      localVideo.videoWidth + 'x' + localVideo.videoHeight + 'px';
+  }
+  if (remoteVideo.videoWidth) {
+    remoteVideoStatsDiv.value = 'remote: ' +
+      remoteVideo.videoWidth + 'x' + remoteVideo.videoHeight + 'px';
+  }
+}, 1000);
