@@ -34,6 +34,14 @@ let packetSeries;
 
 let lastResult;
 
+const getUserMediaConstraintsDiv = document.querySelector('div#getUserMediaConstraints');
+const minWidthInput = document.querySelector('div#minWidth input');
+const maxWidthInput = document.querySelector('div#maxWidth input');
+const minHeightInput = document.querySelector('div#minHeight input');
+const maxHeightInput = document.querySelector('div#maxHeight input');
+const minFramerateInput = document.querySelector('div#minFramerate input');
+const maxFramerateInput = document.querySelector('div#maxFramerate input');
+
 const offerOptions = {
   offerToReceiveAudio: 0,
   offerToReceiveVideo: 1
@@ -68,6 +76,7 @@ function onCreateSessionDescriptionError(error) {
 }
 
 function call() {
+  displayGetUserMediaConstraints();
   callButton.disabled = true;
   bandwidthSelector.disabled = false;
   console.log('Starting call');
@@ -82,7 +91,7 @@ function call() {
   pc2.ontrack = gotRemoteStream;
 
   console.log('Requesting local stream');
-  navigator.mediaDevices.getUserMedia({video: true})
+  navigator.mediaDevices.getUserMedia(getUserMediaConstraints())
     .then(gotStream)
     .catch(e => alert('getUserMedia() error: ' + e.name));
 }
@@ -276,3 +285,43 @@ window.setInterval(() => {
     lastResult = res;
   });
 }, 1000);
+
+
+
+function getUserMediaConstraints() {
+  const constraints = {};
+  constraints.audio = true;
+  constraints.video = {};
+  if (minWidthInput.value !== '0') {
+    constraints.video.width = {};
+    constraints.video.width.min = minWidthInput.value;
+  }
+  if (maxWidthInput.value !== '0') {
+    constraints.video.width = constraints.video.width || {};
+    constraints.video.width.max = maxWidthInput.value;
+  }
+  if (minHeightInput.value !== '0') {
+    constraints.video.height = {};
+    constraints.video.height.min = minHeightInput.value;
+  }
+  if (maxHeightInput.value !== '0') {
+    constraints.video.height = constraints.video.height || {};
+    constraints.video.height.max = maxHeightInput.value;
+  }
+  if (minFramerateInput.value !== '0') {
+    constraints.video.frameRate = {};
+    constraints.video.frameRate.min = minFramerateInput.value;
+  }
+  if (maxFramerateInput.value !== '0') {
+    constraints.video.frameRate = constraints.video.frameRate || {};
+    constraints.video.frameRate.max = maxFramerateInput.value;
+  }
+
+  return constraints;
+}
+
+function displayGetUserMediaConstraints() {
+  const constraints = getUserMediaConstraints();
+  console.log('getUserMedia constraints', constraints);
+  getUserMediaConstraintsDiv.textContent = JSON.stringify(constraints, null, '    ');
+}

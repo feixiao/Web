@@ -26,10 +26,42 @@
 <body>
 
 <div id="container">
-
     <h1><span>PeerConnection: adjust bandwidth</span>
     </h1>
+    <section id="constraints">
+      <div id="getUserMedia">
+        <div class="input">
+          <h2>Camera constraints</h2>
+          <div id="minWidth">
+            <label>Min width <span>4096</span>px:</label>
+            <input type="number" min="0" max="4096" value="1280">
+          </div>
+          <div id="maxWidth">
+            <label>Max width <span>4096</span>px:</label>
+            <input type="number" min="0" max="4096" value="1920">
+          </div>
+          <div id="minHeight">
+            <label>Min height <span>2160</span>px:</label>
+            <input type="number" min="0" max="2160" value="720">
+          </div>
+          <div id="maxHeight">
+            <label>Max height <span>2160</span>px:</label>
+            <input type="number" min="0" max="2160" value="1080">
+          </div>
+          <div id="minFramerate">
+            <label>Min frameRate <span>20</span>fps:</label>
+            <input type="number" min="0" max="60" value="20">
+          </div>
+          <div id="maxFramerate">
+            <label>Max frameRate <span>30</span>fps:</label>
+            <input type="number" min="0" max="60" value="25">
+          </div>
+        </div>
+        <div id="getUserMediaConstraints" class="output"></div>
+      </div>
 
+    </section>
+    
     <video id="localVideo" playsinline autoplay muted></video>
     <video id="remoteVideo" playsinline autoplay></video>
 
