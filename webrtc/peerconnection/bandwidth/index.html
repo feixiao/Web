@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+ *  Copyright (c) 2016 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+-->
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="WebRTC code samples">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <meta itemprop="description" content="Client-side WebRTC code samples">
+    <meta itemprop="name" content="WebRTC code samples">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
+    <base target="_blank">
+    <title>PeerConnection: adjust bandwidth</title>
+    <link rel="stylesheet" href="../../css/main.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+
+</head>
+
+<body>
+
+<div id="container">
+
+    <h1><span>PeerConnection: adjust bandwidth</span>
+    </h1>
+
+    <video id="localVideo" playsinline autoplay muted></video>
+    <video id="remoteVideo" playsinline autoplay></video>
+
+    <div id="buttons">
+        <label>Bandwidth:</label>
+        <select id="bandwidth" disabled>
+            <option value="unlimited" selected>unlimited</option>
+            <option value="2000">2000</option>
+            <option value="1000">1000</option>
+            <option value="500">500</option>
+            <option value="250">250</option>
+            <option value="125">125</option>
+        </select>
+        kbps
+        <button id="callButton">Call</button>
+        <button id="hangupButton">Hang Up</button>
+    </div>
+    <div class="graph-container" id="bitrateGraph">
+        <div>Bitrate</div>
+        <canvas id="bitrateCanvas"></canvas>
+    </div>
+    <div class="graph-container" id="packetGraph">
+        <div>Packets sent per second</div>
+        <canvas id="packetCanvas"></canvas>
+    </div>
+</div>
+
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="js/main.js" async></script>
+<script src="../../js/third_party/graph.js"></script>
+
+<script src="../../js/lib/ga.js"></script>
+</body>
+</html>
