@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div class="options">
+  <div>
+    <button id="mode" >物件模式</button>
+    <button id="clear">清除</button>
+    <button id="add" >添加圆</button>
+    <!-- <button id="outputJpgBtn">匯出成 jpeg</button>
+    <button id="outputPngBtn">匯出成 png</button> -->
+  </div>
+  <div id="drawingOptionArea">
+    <div>
+      <label>粗度：</label>
+      <input type="range" min="0" max="150" id="lineWidthInput" value="1"> 
+      <span id="lineWidthValue">1</span>
+    </div>
+    <div>
+      <label>颜色：</label>
+      <input type="color" min="0" max="150" id="lineColorInput">  
+    </div>
+    <div>
+      <label>阴影顏色：</label>
+      <input type="color" min="0" max="150" id="shadowColorInput">  
+    </div>
+    <div>
+      <label>陰影模糊：</label>
+      <input type="range" min="0" max="30" id="shadowBlurInput" value="1">
+      <span id="shadowBlurValue">1</span>
+    </div>
+    <div>
+      <label>陰影 X 軸 偏移：</label>
+      <input type="range" min="0" max="50" id="shadowOffsetXInput" value="1"> 
+      <span id="shadowOffsetXValue">1</span>
+    </div>
+    <div>
+      <label>陰影 Y 軸 偏移：</label>
+      <input type="range" min="0" max="50" id="shadowOffsetYInput" value="1"> 
+      <span id="shadowOffsetYValue">1</span>
+    </div>
+  </div>
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/fabric.js/4.2.0/fabric.js"></script>
+<script src="draw.js"></script>
+
