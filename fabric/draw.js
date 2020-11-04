@@ -129,13 +129,12 @@ function selectBrush() {
 
 modeBtn.addEventListener("click", toggleMode);
 addBtn.addEventListener("click", function () {
-  var color = new fabric.Color("rgba(0, 0,255, 0.5)"); // 画笔颜色
   var circle1 = new fabric.Circle({
     radius: 65,
     fill: "#039BE5",
     left: 100,
     top: 300,
-    stroke: color,
+    stroke: "rgba(255,0,0,1)",
     strokeWidth: 3,
   });
 
