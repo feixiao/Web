@@ -23,7 +23,7 @@
 #### React + Typescript
 
 - Ant Design
-- UmiJs
+- [UmiJs](https://github.com/umijs/umi-course)
 
 #### Flutter
 
